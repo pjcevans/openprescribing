@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+
 <h1>Explore England's prescribing data</h1>
 
 
@@ -23,17 +25,18 @@
 
 <div class="row">
 
-<div class="col-lg-6 col-md-6 col-sm-6">
-<h3>Look at your CCG</h3>
-<p>We've identified standard <a href="https://openprescribing.net/measure/">prescribing measures</a>, and created dashboards for every Clinical Commissioning Group in the country.</p>
-<a href="{% url 'all_ccgs' %}" class="btn btn-lg btn-info">Find a CCG &raquo;</a>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h3>Look at your GP practice or CCG</h3>
+<p>We've identified standard <a href="https://openprescribing.net/measure/">prescribing measures</a>, and created dashboards for every GP practice and Clinical Commissioning Group in the country.</p>
+<form>
+<div class="bigdrop">
+<select style="width: 100%" id="homeOrg">
+</select>
+</div>
+</form>
 </div>
 
-<div class="col-lg-6 col-md-6 col-sm-6">
-<h3>Look at your GP practice</h3>
-<p>We've identified standard prescribing measures, and created dashboards for every GP practice in the country.</p>
-<a href="{% url 'all_practices' %}" class="btn btn-lg btn-info">Find a practice &raquo;</a>
-</div>
+
 </div>
 
 <div class="row">
